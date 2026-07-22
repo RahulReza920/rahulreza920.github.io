@@ -5,21 +5,46 @@ export const SOCIAL_LINKS = {
 	medium: 'https://medium.com/@rahulreza920',
 };
 
+export const PATHAO = {
+	name: 'Pathao',
+	role: 'Software Engineer (Backend) · Jan 2024 — Present',
+	description:
+		"I'm a backend engineer on Pathao's core ride-hailing and logistics platform — an auth system serving 1M+ users at 30ms P99, a fuzzy-search address builder, and the CI pipelines that ship 20+ microservices.",
+	url: 'https://pathao.com',
+	image: 'pathao-logo.png',
+};
+
 export const PROJECTS = [
 	{
 		name: 'Enterprise URL Shortener',
 		stack: 'Go · PostgreSQL · Redis · Docker',
 		description:
-			'Production-grade URL shortener built with Clean Architecture — PASETO v4 auth, distributed GCRA rate limiting, collision-free bijective ID encoding, and sub-10ms P95 latency. Full unit/integration/E2E test suite automated via Makefile.',
+			'A production-grade URL shortener built with Clean Architecture — PASETO v4 auth, distributed rate limiting, and sub-10ms P95 latency.',
 		url: 'https://github.com/RahulReza920/url-shortener',
 	},
 	{
-		name: 'Real-Time Chat Application',
+		name: 'Real-Time Chat App',
 		stack: 'Rust · Axum · Tokio · WebSockets',
 		description:
-			'Concurrent chat server on the Tokio async runtime with safe WebSocket handling — broadcast channels distribute messages across clients in real time, with structured tracing throughout.',
+			'A concurrent chat server on the Tokio async runtime with safe WebSocket handling and real-time broadcast channels.',
 		url: 'https://github.com/RahulReza920/chat_app',
 	},
+];
+
+export const TECHNOLOGIES = [
+	'Go / Rust / C++',
+	'PostgreSQL / MySQL / Redis',
+	'Docker / Kubernetes / GCP',
+	'gRPC / REST / RabbitMQ / Pub-Sub',
+	'…and always exploring something new!',
+];
+
+export const AWARDS = [
+	'Technical blog with 20,000+ monthly readers — Medium',
+	'Kubernetes for the Absolute Beginners — KodeKloud Certificate',
+	'Machine Learning Specialization — Stanford University (Coursera)',
+	'Top 5, RUET Intra University Programming Contest',
+	'Published: BHSGR-Net, Big Data IoT & Machine Learning Conf. (BIM 2023)',
 ];
 
 export const PUBLICATIONS = [

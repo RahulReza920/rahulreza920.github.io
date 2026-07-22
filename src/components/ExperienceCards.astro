@@ -1,0 +1,33 @@
+---
+import { PATHAO, PROJECTS } from '../lib/data';
+import { withBase } from '../lib/url';
+---
+
+<section id="experience">
+	<h2>Experience</h2>
+	<a class="pathao-card" href={PATHAO.url} target="_blank" rel="noopener">
+		<div class="pathao-image">
+			<img src={withBase(PATHAO.image)} alt={PATHAO.name} />
+		</div>
+		<div class="pathao-copy">
+			<div class="row">
+				<span class="entry-title">{PATHAO.name}</span>
+				<span class="entry-meta">{PATHAO.role}</span>
+			</div>
+			<p>{PATHAO.description}</p>
+		</div>
+	</a>
+
+	<h2 style="margin-top: 3rem;">Projects</h2>
+	<div class="stack">
+		{PROJECTS.map((p) => (
+			<div>
+				<div class="row">
+					<a class="entry-title" href={p.url} target="_blank" rel="noopener">{p.name}</a>
+					<span class="entry-meta">{p.stack}</span>
+				</div>
+				<p style="margin-top: 0.4rem;">{p.description}</p>
+			</div>
+		))}
+	</div>
+</section>

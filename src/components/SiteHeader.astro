@@ -1,0 +1,18 @@
+---
+import { withBase } from '../lib/url';
+import { SOCIAL_LINKS } from '../lib/data';
+---
+
+<header class="intro">
+	<a href={withBase('')} class="site-title-link">
+		<h1>Rahul Reza</h1>
+	</a>
+	<p class="tagline muted">Software Engineer. Writer.</p>
+	<nav class="nav">
+		<a href={withBase('')}>about me</a>
+		<a href={withBase('#experience')}>experience</a>
+		<a href={withBase('blog/')}>writing</a>
+		<a href={withBase('certificates/')}>certificates</a>
+		<a href={SOCIAL_LINKS.email}>contact</a>
+	</nav>
+</header>

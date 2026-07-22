@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import { withBase } from '../lib/url';
+import SiteHeader from '../components/SiteHeader.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
 	title: string;
@@ -9,7 +11,7 @@ interface Props {
 
 const {
 	title,
-	description = 'Rahul Reza Roky — Backend Software Engineer building distributed systems in Go and Rust.',
+	description = 'Rahul Reza — Software Engineer building distributed systems in Go and Rust.',
 } = Astro.props;
 ---
 
@@ -24,10 +26,15 @@ const {
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
 		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
 	</head>
 	<body>
 		<main>
+			<SiteHeader />
 			<slot />
+			<Footer />
 		</main>
 	</body>
 </html>

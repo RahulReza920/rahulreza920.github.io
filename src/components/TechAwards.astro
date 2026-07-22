@@ -1,0 +1,18 @@
+---
+import { TECHNOLOGIES, AWARDS } from '../lib/data';
+---
+
+<section class="tech-awards-grid">
+	<div>
+		<h3>Technologies &amp; Languages</h3>
+		<ul class="plain dash-list">
+			{TECHNOLOGIES.map((t) => <li>{t}</li>)}
+		</ul>
+	</div>
+	<div>
+		<h3>Awards</h3>
+		<ul class="plain dash-list">
+			{AWARDS.map((a) => <li>{a}</li>)}
+		</ul>
+	</div>
+</section>

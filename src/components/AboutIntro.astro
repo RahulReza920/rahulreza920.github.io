@@ -1,22 +1,7 @@
 ---
 import { SOCIAL_LINKS } from '../lib/data';
 import { withBase } from '../lib/url';
-
-const hasPhoto = true;
 ---
-
-<header class="intro">
-	<h1>Rahul Reza Roky</h1>
-	<p class="tagline muted">Backend Software Engineer. Writer.</p>
-	<nav class="nav">
-		<a href="#about">about me</a>
-		<a href="#experience">experience</a>
-		<a href="#projects">projects</a>
-		<a href="#writing">writing</a>
-		<a href="#certificates">certificates</a>
-		<a href="#contact">contact</a>
-	</nav>
-</header>
 
 <section id="about" class="about-grid">
 	<div class="about-text">
@@ -39,10 +24,6 @@ const hasPhoto = true;
 	</div>
 
 	<div class="about-photo">
-		{hasPhoto ? (
-			<img src={withBase('headshot.jpg')} alt="Rahul Reza Roky" />
-		) : (
-			<div class="about-photo-placeholder">photo</div>
-		)}
+		<img src={withBase('headshot.jpg')} alt="Rahul Reza" />
 	</div>
 </section>
