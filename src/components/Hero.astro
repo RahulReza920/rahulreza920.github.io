@@ -5,27 +5,44 @@ import { withBase } from '../lib/url';
 const hasPhoto = true;
 ---
 
-<section>
-	{hasPhoto ? (
-		<img class="avatar" src={withBase('headshot.jpg')} alt="Rahul Reza Roky" />
-	) : (
-		<div class="avatar-placeholder">photo</div>
-	)}
-
+<header class="intro">
 	<h1>Rahul Reza Roky</h1>
-	<p class="muted">Backend Software Engineer @ Pathao — Go, Rust, and distributed systems.</p>
+	<p class="tagline muted">Backend Software Engineer. Writer.</p>
+	<nav class="nav">
+		<a href="#about">about me</a>
+		<a href="#experience">experience</a>
+		<a href="#projects">projects</a>
+		<a href="#writing">writing</a>
+		<a href="#certificates">certificates</a>
+		<a href="#contact">contact</a>
+	</nav>
+</header>
 
-	<p>
-		I build backend systems that hold up under real load: an auth service handling 1M+ users at
-		30ms P99, a custom fuzzy-search address builder, and the CI pipelines that ship it all. Off the
-		clock I write about Go, databases, and performance for <a href={SOCIAL_LINKS.medium}>20,000+ monthly readers</a> on Medium.
-	</p>
+<section id="about" class="about-grid">
+	<div class="about-text">
+		<p>
+			I'm a backend software engineer based in Dhaka, building distributed systems in Go and Rust.
+			I've shipped an auth service handling 1M+ users at 30ms P99, a custom fuzzy-search address
+			builder, and the CI pipelines that ship it all.
+		</p>
+		<p>
+			I'm currently a Software Engineer at Pathao. Off the clock, I write about Go, databases, and
+			performance for <a href={SOCIAL_LINKS.medium}>20,000+ monthly readers</a> on Medium.
+		</p>
+		<div class="links">
+			<a href={SOCIAL_LINKS.email}>Email</a>
+			<a href={SOCIAL_LINKS.github}>GitHub</a>
+			<a href={SOCIAL_LINKS.linkedin}>LinkedIn</a>
+			<a href={SOCIAL_LINKS.medium}>Medium</a>
+			<a href={withBase('resume.pdf')}>Resume</a>
+		</div>
+	</div>
 
-	<div class="links">
-		<a href={SOCIAL_LINKS.email}>Email</a>
-		<a href={SOCIAL_LINKS.github}>GitHub</a>
-		<a href={SOCIAL_LINKS.linkedin}>LinkedIn</a>
-		<a href={SOCIAL_LINKS.medium}>Medium</a>
-		<a href={withBase('resume.pdf')}>Resume</a>
+	<div class="about-photo">
+		{hasPhoto ? (
+			<img src={withBase('headshot.jpg')} alt="Rahul Reza Roky" />
+		) : (
+			<div class="about-photo-placeholder">photo</div>
+		)}
 	</div>
 </section>

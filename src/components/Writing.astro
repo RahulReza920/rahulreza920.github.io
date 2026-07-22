@@ -16,7 +16,7 @@ const mediumPosts = (await getMediumPosts(6)).map((p) => ({ ...p, source: 'mediu
 const entries = [...nativePosts, ...mediumPosts].sort((a, b) => (a.date < b.date ? 1 : -1));
 ---
 
-<section>
+<section id="writing" class="prose">
 	<h2>Writing</h2>
 	<p class="muted" style="margin-top: -0.5rem;">
 		I write about Go, Rust, and databases for <a href={SOCIAL_LINKS.medium}>20,000+ monthly readers</a> on Medium.
