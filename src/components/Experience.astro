@@ -1,0 +1,26 @@
+---
+const bullets = [
+	'Architected the authentication system for Pathao Offline Ride with caching and multi-layer rate limiting — 30ms P99 latency serving 1M+ users at 99.9% uptime.',
+	'Engineered the Pathao Rent-a-Car manual ride management backend with optimized PostgreSQL indexing and Redis caching, using Go concurrency for sub-50ms API responses.',
+	'Built the n-gram fuzzy search engine powering Pathao’s primary custom address builder, serving millions of users with real-time location matching.',
+	'Hunted a production Go allocation leak with pprof — 85% heap churn reduction (16.3 GB → 2.5 GB) in under an hour, live at ~100 RPS, zero downtime.',
+	'Designed a modular GitLab CI pipeline automating GitOps deployments for 20+ microservices using job artifacts and conditional rules.',
+	'Established a testing framework with testify and GoMock reaching 85%+ coverage, cutting production incidents by 40%.',
+];
+---
+
+<section>
+	<h2>Experience</h2>
+	<div class="row">
+		<span class="entry-title">Software Engineer (Backend), Pathao</span>
+		<span class="entry-meta">Jan 2024 — Present · Dhaka, Bangladesh</span>
+	</div>
+	<ul class="plain" style="margin-top: 1rem;">
+		{bullets.map((b) => (
+			<li style="margin-bottom: 0.6rem; padding-left: 1.1rem; position: relative;">
+				<span style="position: absolute; left: 0; color: var(--muted);">—</span>
+				{b}
+			</li>
+		))}
+	</ul>
+</section>

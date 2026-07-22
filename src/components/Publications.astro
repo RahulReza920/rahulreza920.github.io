@@ -1,0 +1,15 @@
+---
+import { PUBLICATIONS } from '../lib/data';
+---
+
+<section>
+	<h2>Publications</h2>
+	<ul class="plain stack" style="gap: 1rem;">
+		{PUBLICATIONS.map((p) => (
+			<li>
+				<div class="entry-title">{p.url ? <a href={p.url}>{p.title}</a> : p.title}</div>
+				<div class="entry-meta">{p.venue}</div>
+			</li>
+		))}
+	</ul>
+</section>

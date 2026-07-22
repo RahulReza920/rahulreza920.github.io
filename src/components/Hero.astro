@@ -1,0 +1,31 @@
+---
+import { SOCIAL_LINKS } from '../lib/data';
+import { withBase } from '../lib/url';
+
+const hasPhoto = true;
+---
+
+<section>
+	{hasPhoto ? (
+		<img class="avatar" src={withBase('headshot.jpg')} alt="Rahul Reza Roky" />
+	) : (
+		<div class="avatar-placeholder">photo</div>
+	)}
+
+	<h1>Rahul Reza Roky</h1>
+	<p class="muted">Backend Software Engineer @ Pathao — Go, Rust, and distributed systems.</p>
+
+	<p>
+		I build backend systems that hold up under real load: an auth service handling 1M+ users at
+		30ms P99, a custom fuzzy-search address builder, and the CI pipelines that ship it all. Off the
+		clock I write about Go, databases, and performance for <a href={SOCIAL_LINKS.medium}>20,000+ monthly readers</a> on Medium.
+	</p>
+
+	<div class="links">
+		<a href={SOCIAL_LINKS.email}>Email</a>
+		<a href={SOCIAL_LINKS.github}>GitHub</a>
+		<a href={SOCIAL_LINKS.linkedin}>LinkedIn</a>
+		<a href={SOCIAL_LINKS.medium}>Medium</a>
+		<a href={withBase('resume.pdf')}>Resume</a>
+	</div>
+</section>

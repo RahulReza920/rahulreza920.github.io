@@ -1,0 +1,14 @@
+---
+import { CERTIFICATES } from '../lib/data';
+---
+
+<section>
+	<h2>Certificates &amp; Achievements</h2>
+	<ul class="plain stack" style="gap: 0.6rem;">
+		{CERTIFICATES.map((c) => (
+			<li>
+				<a href={c.url}>{c.title}</a>
+			</li>
+		))}
+	</ul>
+</section>
