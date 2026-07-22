@@ -5,6 +5,5 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://rahulreza920.github.io',
-	base: '/portfolio',
 	integrations: [sitemap()],
 });
